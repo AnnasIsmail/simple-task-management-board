@@ -1,0 +1,136 @@
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirm-dialog {
+  background: #1E293B;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.5), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.4),
+    0 0 0 1px #334155;
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #334155;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.confirm-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid #334155;
+}
+
+.confirm-icon {
+  font-size: 24px;
+}
+
+.confirm-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.confirm-body {
+  padding: 20px;
+}
+
+.confirm-body p {
+  margin: 0;
+  color: #CBD5E1;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.confirm-footer {
+  padding: 16px 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #334155;
+}
+
+.confirm-button {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.confirm-button-cancel {
+  background: #334155;
+  color: #F1F5F9;
+}
+
+.confirm-button-cancel:hover {
+  background: #475569;
+}
+
+.confirm-button-danger {
+  background: #DC2626;
+  color: #FFFFFF;
+}
+
+.confirm-button-danger:hover {
+  background: #B91C1C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.5);
+}
+
+.confirm-button-primary {
+  background: #3B82F6;
+  color: #FFFFFF;
+}
+
+.confirm-button-primary:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+.confirm-button:active {
+  transform: translateY(0);
+}
+

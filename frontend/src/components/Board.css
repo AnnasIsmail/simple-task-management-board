@@ -1,0 +1,24 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.board > * {
+  will-change: contents;
+}
+
+/* Drag and Drop Styles */
+.board [data-rbd-draggable-context-id] {
+  transition: opacity 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .board {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
