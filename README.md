@@ -2,6 +2,8 @@
 
 A full-stack application for simple task management (similar to Trello/Kanban board) that allows users to create, view, update, and delete tasks.
 
+![Application Screenshot](./Screenshot.png)
+
 ## 📋 Tech Stack
 
 - **Backend**: Express.js, Sequelize, PostgreSQL
